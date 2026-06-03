@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   <link rel="stylesheet" href="/projetoti102/sos.css">
     <title>
         {% block titulo %}
         Homepage
@@ -13,5 +14,26 @@
     <h1>Home page</h1>
     <a href="{{url_for('perfil',usuario='Fernando')}}">Redirecionar</a>
 {% endblock %}
+
+<form id="loginForm">
+
+    <input id = "email"
+        type="email"
+        placeholder="E-mail"
+        required
+    >
+
+    <input id="senha"
+        type="password"
+        placeholder="Senha"
+        required
+    >
+
+    <button type="submit">
+        Entrar
+    </button>
+
+</form>
+<script src="/projetoti102/sos.js"></script>
 </body>
 </html>
