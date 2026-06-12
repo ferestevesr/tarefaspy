@@ -21,9 +21,10 @@
 <a href="{{ url_for('perfil', usuario='fernando') }}"> Ir para o perfil</a>
 <a href="{{ url_for ('criarconta')}}">Criar conta</a>
 
+{% block formulario %}
 <form method="POST">
 
-    {% block formulario %}
+
 
     {{ form.csrf_token }}
 
@@ -35,8 +36,9 @@
 
     {{form.botao() }}
 
-    {% endblock %}
+
 </form>
+{% endblock %}
 {% endblock %}
 </body>
 </html>

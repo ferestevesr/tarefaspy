@@ -8,6 +8,9 @@ Criar conta
 
 <a href="{{ url_for('home') }}">Login</a>
 
+{% block formulario %}
+
+<form method="POST">
 {{ form.csrf_token }}
 
 {{ form.email.label }}
@@ -24,4 +27,6 @@ Criar conta
 
 {{ form.botao_confirmacao() }}
 
+</form>
+{% endblock %}
 {% endblock %}
