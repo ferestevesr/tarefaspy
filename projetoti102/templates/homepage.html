@@ -13,12 +13,30 @@
 </style>
 </head>
 <body>
-    <div class="InicioSos">
+{% block body %}
+
         <h1>SOS Mulher</h1>
         <p> Seja bem vinda ao SOS Mulher</p>
-    </div>
-<a href="{{ url_for('perfil', usuario='fernando') }}">
-    Ir para o Perfil
-</a>
+
+<a href="{{ url_for('perfil', usuario='fernando') }}"> Ir para o perfil</a>
+<a href="{{ url_for ('criarconta')}}">Criar conta</a>
+
+<form method="POST">
+
+    {% block formulario %}
+
+    {{ form.csrf_token }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    {{ form.senha.label }}
+    {{ form.senha() }}
+
+    {{form.botao() }}
+
+    {% endblock %}
+</form>
+{% endblock %}
 </body>
 </html>

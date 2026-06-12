@@ -6,7 +6,7 @@ from projetoti102.forms import FormLogin, FormCriarConta
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    formlogin=FormLogin()
+    formlogin = FormLogin()
     return render_template('homepage.html', form=formlogin)
 
 @app.route('/criarconta', methods=['GET', 'POST'])
